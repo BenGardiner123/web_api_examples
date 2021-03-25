@@ -24,10 +24,10 @@ namespace web_api_practice1.Controllers
         }
 
         [HttpPost("CheckTeam")]
-        public bool teamCheck([FromBody] Team team)
+        public IHttpActionResult teamCheck([FromBody] Team team)
         {
-            
-           
+            if(this.ModelState.IsValid)
+            {
                 if (this.Team.checkTeam(team) == null)
                 {
                     return false;
@@ -36,9 +36,14 @@ namespace web_api_practice1.Controllers
                 {
                     return true;
                 }
-           
-          
-            
+
+            }
+            else
+            {
+                return this.BadRequest(this.ModelState);
+            }
+               
+             
         }
 
         [HttpPost("AddTeam")]
