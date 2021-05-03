@@ -23,6 +23,8 @@ namespace web_api_practice1.Models
         public Team(string teamName)
         {
             TeamName = teamName;
+            var check = 0;
+
         }
 
 
