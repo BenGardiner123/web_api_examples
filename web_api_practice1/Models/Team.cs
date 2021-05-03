@@ -18,6 +18,7 @@ namespace web_api_practice1.Models
         public Team()
         {
             this.TeamName = " ";
+            var superfriendly_assasin = 2;
         }
 
         public Team(string teamName)
