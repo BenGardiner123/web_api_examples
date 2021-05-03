@@ -29,8 +29,7 @@ namespace web_api_practice1.Models
 
         public Team checkTeam(Team t)
         {
-            string connectionString = @"Data Source = (localdb)\ProjectsV13; Initial Catalog = nbaLocal; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-            SqlConnection con = new SqlConnection(connectionString);
+           
 
             string queryString = "SELECT * FROM TEAM WHERE TeamName = @team";
 
